@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script language="javascript" type="text/javascript" src="web3.min.js"></script>
+  <title>Healthcare App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1>DecentralizedHealthcare Management System</h1>
+      <nav>
+        <ul>
+          <li><a href="#dashboard">Dashboard</a></li>
+          <li><a href="#patients">Patients</a></li>
+          <li><a href="#appointments">Appointments</a></li>
+          <li><a href="#doctors">Doctors</a></li>
+          <img src="assets/images/connect_to_metamask.png" alt="Sign In with MetaMask" id="metamask-login-btn" class="metamask-btn">
+          <p id="status"></p>
+          
+        </ul>
+        
+      </nav>
+    </div>
+  </header>
+
+  <!-- Dashboard Section -->
+  <section id="dashboard">
+    <div class="container">
+      <h2>Welcome to the Healthcare App</h2>
+      <p>Manage patients, doctors, and appointments efficiently.</p>
+    </div>
+  </section>
+
+  <!-- Patients Section -->
+  <section id="patients" class="section">
+    <div class="container">
+      <h2>Patient Records</h2>
+      <button id="add-patient-btn">Add New Patient</button>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Condition</th>
+          </tr>
+        </thead>
+        <tbody id="patient-table">
+          <!-- Patient Data Goes Here -->
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Appointments Section -->
+  <section id="appointments" class="section">
+    <div class="container">
+      <h2>Appointments</h2>
+      <form id="appointment-form">
+        <label for="patient-name">Patient Name:</label>
+        <input type="text" id="patient-name" required>
+
+        <label for="doctor-name">Doctor Name:</label>
+        <input type="text" id="doctor-name" required>
+
+        <label for="appointment-date">Date:</label>
+        <input type="date" id="appointment-date" required>
+
+        <button type="submit">Schedule Appointment</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Doctors Section -->
+  <section id="doctors" class="section">
+    <div class="container">
+      <h2>Doctors</h2>
+      <div id="doctors-list">
+        <p>Dr. Sarah Johnson - Cardiologist</p>
+        <p>Dr. Michael Brown - Neurologist</p>
+        <p>Dr. Emily Davis - General Practitioner</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Healthcare Management System. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
